@@ -1,0 +1,2796 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, viewport-fit=cover"
+        >
+        <meta name="theme-color" content="#f7c8e0">
+          <title>For My Gulaboo 💗</title>
+          <style>
+
+/* =========================================================
+   💗 ORIGINAL DESIGN — POLISHED VERSION
+========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&family=Pacifico&family=Quicksand:wght@500;600;700&display=swap');
+
+
+:root{
+  --pink:#ff8fc7;
+  --hot:#ff4fa3;
+  --purple:#9b7bea;
+  --deep:#673f98;
+  --cream:#fff8fc;
+  --ink:#59355f;
+  --card:rgba(255,255,255,.86);
+}
+
+
+*{
+  box-sizing:border-box;
+  -webkit-tap-highlight-color:transparent;
+}
+
+
+html{
+  scroll-behavior:smooth;
+  background:#f8d9ee;
+  overflow-x:hidden;
+}
+
+
+body{
+  margin:0;
+  width:100%;
+  min-height:100%;
+  font-family:"Quicksand",sans-serif;
+  color:var(--ink);
+  background:#f8d9ee;
+  overflow-x:hidden;
+}
+
+
+#app{
+  width:100%;
+  min-height:100svh;
+  overflow-x:hidden;
+}
+
+
+button,
+input{
+  font:inherit;
+}
+
+
+button{
+  cursor:pointer;
+  border:0;
+}
+
+
+/* =========================================================
+   🎵 BACKGROUND MUSIC
+========================================================= */
+
+#backgroundMusic{
+  display:none;
+}
+
+
+/* =========================================================
+   SCREENS
+========================================================= */
+
+.screen{
+
+  min-height:100svh;
+  min-height:100dvh;
+
+  width:100%;
+
+  position:relative;
+
+  display:none;
+
+  overflow-x:hidden;
+  overflow-y:auto;
+
+  padding:
+    max(22px,env(safe-area-inset-top))
+    max(22px,env(safe-area-inset-right))
+    max(22px,env(safe-area-inset-bottom))
+    max(22px,env(safe-area-inset-left));
+
+  isolation:isolate;
+
+  overscroll-behavior-x:none;
+
+}
+
+
+.screen.active{
+
+  display:flex;
+
+  animation:
+    screenIn
+    .8s
+    cubic-bezier(.2,.8,.2,1);
+
+}
+
+
+@keyframes screenIn{
+
+  from{
+    opacity:0;
+    transform:translateY(22px) scale(.985);
+  }
+
+  to{
+    opacity:1;
+    transform:none;
+  }
+
+}
+
+
+/* =========================================================
+   BACKGROUND
+========================================================= */
+
+.bg{
+
+  position:absolute;
+
+  inset:0;
+
+  z-index:-3;
+
+  pointer-events:none;
+
+  background:
+
+    radial-gradient(
+      circle at 15% 15%,
+      #fff 0 1.5px,
+      transparent 2px
+    ),
+
+    radial-gradient(
+      circle at 80% 22%,
+      #fff 0 1.5px,
+      transparent 2px
+    ),
+
+    linear-gradient(
+      135deg,
+      #ffdff0,
+      #e8dcff 52%,
+      #ffd4e9
+    );
+
+  background-size:
+    80px 80px,
+    105px 105px,
+    100% 100%;
+
+}
+
+
+.bg:before,
+.bg:after{
+
+  content:"";
+
+  position:absolute;
+
+  inset:-10%;
+
+  pointer-events:none;
+
+  background:
+
+    radial-gradient(
+      circle at 20% 70%,
+      rgba(255,255,255,.6) 0 3px,
+      transparent 4px
+    ),
+
+    radial-gradient(
+      circle at 70% 40%,
+      rgba(255,255,255,.7) 0 2px,
+      transparent 3px
+    );
+
+  animation:
+    drift
+    10s
+    linear
+    infinite;
+
+}
+
+
+.bg:after{
+
+  animation-duration:15s;
+
+  transform:scale(1.2);
+
+}
+
+
+@keyframes drift{
+
+  to{
+
+    transform:
+      translate3d(3%,-2%,0)
+      rotate(2deg);
+
+  }
+
+}
+
+
+/* =========================================================
+   DECORATIONS
+========================================================= */
+
+.decor{
+
+  position:absolute;
+
+  inset:0;
+
+  pointer-events:none;
+
+  z-index:-1;
+
+}
+
+
+.heart,
+.spark{
+
+  position:absolute;
+
+  animation:
+    float
+    6s
+    ease-in-out
+    infinite;
+
+}
+
+
+.heart{
+
+  font-size:
+    clamp(
+      18px,
+      5vw,
+      32px
+    );
+
+}
+
+
+.spark{
+
+  font-size:18px;
+
+}
+
+
+@keyframes float{
+
+  50%{
+
+    transform:
+      translateY(-22px)
+      rotate(8deg);
+
+    opacity:.9;
+
+  }
+
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.card{
+
+  width:min(
+    92vw,
+    520px
+  );
+
+  max-width:100%;
+
+  margin:auto;
+
+  background:var(--card);
+
+  border:3px solid #fff;
+
+  box-shadow:
+    0 18px 45px
+    rgba(100,50,120,.16);
+
+  border-radius:30px;
+
+  padding:
+    clamp(
+      24px,
+      6vw,
+      42px
+    );
+
+  backdrop-filter:blur(12px);
+
+  -webkit-backdrop-filter:blur(12px);
+
+  text-align:center;
+
+  position:relative;
+
+}
+
+
+/* =========================================================
+   TEXT
+========================================================= */
+
+h1,
+h2,
+p{
+
+  margin:0;
+
+}
+
+
+.script{
+
+  font-family:Pacifico,cursive;
+
+  color:var(--hot);
+
+}
+
+
+.title{
+
+  font-family:"Baloo 2";
+
+  font-weight:800;
+
+  font-size:
+    clamp(
+      42px,
+      12vw,
+      78px
+    );
+
+  line-height:.92;
+
+}
+
+
+.subtitle{
+
+  font-size:
+    clamp(
+      18px,
+      5vw,
+      24px
+    );
+
+  margin-top:12px;
+
+  font-weight:700;
+
+}
+
+
+.small{
+
+  font-size:14px;
+
+  opacity:.75;
+
+}
+
+
+/* =========================================================
+   PHOTOS
+========================================================= */
+
+.photo-frame{
+
+  width:min(
+    68vw,
+    270px
+  );
+
+  max-width:100%;
+
+  aspect-ratio:1/1;
+
+  object-fit:cover;
+
+  border:10px solid white;
+
+  border-bottom-width:30px;
+
+  box-shadow:
+    0 14px 25px
+    #7b4d862e;
+
+  transform:rotate(-2deg);
+
+  border-radius:6px;
+
+  margin:20px auto;
+
+  display:block;
+
+}
+
+
+.birthday-photo{
+
+  width:min(
+    66vw,
+    290px
+  );
+
+  max-width:100%;
+
+  aspect-ratio:4/5;
+
+  object-fit:cover;
+
+  border:10px solid #fff;
+
+  box-shadow:
+    0 18px 35px
+    #8b4b9830;
+
+  transform:rotate(2deg);
+
+  display:block;
+
+  margin:20px auto;
+
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.primary,
+.secondary{
+
+  padding:14px 24px;
+
+  border-radius:999px;
+
+  font-weight:800;
+
+  box-shadow:
+    0 8px 16px
+    #7d4a8c25;
+
+  transition:
+    transform .25s ease,
+    box-shadow .25s ease;
+
+}
+
+
+.primary{
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--hot),
+      var(--purple)
+    );
+
+  color:white;
+
+}
+
+
+.secondary{
+
+  background:white;
+
+  color:var(--deep);
+
+}
+
+
+.primary:hover,
+.secondary:hover{
+
+  transform:translateY(-3px);
+
+  box-shadow:
+    0 12px 22px
+    #7d4a8c30;
+
+}
+
+
+.primary:active,
+.secondary:active{
+
+  transform:scale(.95);
+
+}
+
+
+/* =========================================================
+   CENTER
+========================================================= */
+
+.full-center{
+
+  align-items:center;
+
+  justify-content:center;
+
+  text-align:center;
+
+}
+
+
+/* =========================================================
+   PASSCODE
+========================================================= */
+
+.code{
+
+  display:flex;
+
+  justify-content:center;
+
+  gap:12px;
+
+  margin:20px;
+
+}
+
+
+.dot{
+
+  width:20px;
+
+  height:20px;
+
+  flex:0 0 20px;
+
+  border-radius:50%;
+
+  border:2px solid var(--purple);
+
+  background:#fff;
+
+  transition:.18s ease;
+
+}
+
+
+.dot.filled{
+
+  background:var(--hot);
+
+  box-shadow:
+    0 0 0 5px
+    #ff8fc733;
+
+  transform:scale(1.12);
+
+  animation:
+    dotPop
+    .16s
+    ease-out;
+
+}
+
+
+.dot.wrong{
+
+  background:#ff5b9d;
+
+  border-color:#ff5b9d;
+
+  animation:
+    shake
+    .35s;
+
+}
+
+
+@keyframes dotPop{
+
+  from{
+
+    transform:scale(.75);
+
+    opacity:.5;
+
+  }
+
+  to{
+
+    transform:scale(1.12);
+
+    opacity:1;
+
+  }
+
+}
+
+
+@keyframes shake{
+
+  25%{
+    transform:translateX(-5px);
+  }
+
+  50%{
+    transform:translateX(5px);
+  }
+
+  75%{
+    transform:translateX(-4px);
+  }
+
+}
+
+
+.keypad{
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(3,1fr);
+
+  gap:10px;
+
+  margin:18px auto;
+
+  width:100%;
+
+  max-width:280px;
+
+}
+
+
+.key{
+
+  background:#fff;
+
+  border-radius:18px;
+
+  padding:15px;
+
+  font-size:20px;
+
+  font-weight:800;
+
+  color:var(--deep);
+
+  box-shadow:
+    0 5px 12px
+    #7d4a8c1c;
+
+  transition:.15s;
+
+}
+
+
+.key:active{
+
+  transform:scale(.91);
+
+  background:#ffe3f1;
+
+}
+
+
+#passMsg{
+
+  height:22px;
+
+  color:#e34b91;
+
+  font-weight:800;
+
+}
+
+
+/* =========================================================
+   HINT
+========================================================= */
+
+.hint{
+
+  position:fixed;
+
+  right:
+    max(
+      14px,
+      env(safe-area-inset-right)
+    );
+
+  bottom:
+    max(
+      14px,
+      env(safe-area-inset-bottom)
+    );
+
+  background:#fff;
+
+  border:2px solid #fff;
+
+  padding:10px 13px;
+
+  border-radius:18px;
+
+  color:var(--deep);
+
+  font-weight:800;
+
+  box-shadow:
+    0 7px 18px
+    #7d4a8c25;
+
+  z-index:100;
+
+}
+
+
+.hint-box{
+
+  display:none;
+
+  position:fixed;
+
+  right:14px;
+
+  bottom:68px;
+
+  width:min(
+    78vw,
+    290px
+  );
+
+  background:#fff;
+
+  padding:14px;
+
+  border-radius:18px;
+
+  box-shadow:
+    0 12px 30px
+    #7d4a8c30;
+
+  font-weight:700;
+
+  z-index:101;
+
+}
+
+
+.hint-box.show{
+
+  display:block;
+
+  animation:
+    pop
+    .3s;
+
+}
+
+
+@keyframes pop{
+
+  from{
+
+    opacity:0;
+
+    transform:scale(.9);
+
+  }
+
+  to{
+
+    opacity:1;
+
+    transform:none;
+
+  }
+
+}
+
+
+/* =========================================================
+   NO SCREEN
+========================================================= */
+
+.no-reaction{
+
+  font-family:"Baloo 2";
+
+  font-size:
+    clamp(
+      34px,
+      10vw,
+      60px
+    );
+
+  font-weight:800;
+
+  color:var(--hot);
+
+}
+
+
+.gif-slot{
+
+  width:min(
+    55vw,
+    240px
+  );
+
+  max-width:100%;
+
+  height:170px;
+
+  object-fit:contain;
+
+  border-radius:20px;
+
+  margin:15px auto;
+
+  display:block;
+
+}
+
+
+/* =========================================================
+   CELEBRATION
+========================================================= */
+
+.celebrate{
+
+  align-items:center;
+
+  justify-content:center;
+
+  text-align:center;
+
+}
+
+
+/* =========================================================
+   CONFETTI
+========================================================= */
+
+.confetti{
+
+  position:absolute;
+
+  inset:0;
+
+  pointer-events:none;
+
+  overflow:hidden;
+
+  z-index:4;
+
+}
+
+
+.confetti i{
+
+  position:absolute;
+
+  width:8px;
+
+  height:15px;
+
+  top:-20px;
+
+  animation:
+    fall
+    var(--d)
+    linear
+    infinite;
+
+  left:var(--x);
+
+  transform:
+    rotate(var(--r));
+
+  background:var(--c);
+
+}
+
+
+@keyframes fall{
+
+  to{
+
+    top:110%;
+
+    transform:
+      translateX(30px)
+      rotate(720deg);
+
+  }
+
+}
+
+
+/* =========================================================
+   BALLOONS
+========================================================= */
+
+.balloon{
+
+  position:absolute;
+
+  bottom:-100px;
+
+  font-size:
+    clamp(
+      40px,
+      10vw,
+      75px
+    );
+
+  animation:
+    rise
+    var(--t)
+    linear
+    infinite;
+
+  left:var(--x);
+
+  z-index:-1;
+
+  pointer-events:none;
+
+}
+
+
+@keyframes rise{
+
+  to{
+
+    transform:
+      translateY(-125svh)
+      translateX(var(--s))
+      rotate(8deg);
+
+    opacity:.15;
+
+  }
+
+}
+
+
+/* =========================================================
+   CANDLE
+========================================================= */
+
+.cake{
+
+  font-size:
+    clamp(
+      70px,
+      20vw,
+      120px
+    );
+
+  filter:
+    drop-shadow(
+      0 10px 10px
+      #8b4b9830
+    );
+
+}
+
+
+.candle{
+
+  display:inline-block;
+
+  font-size:65px;
+
+  transition:.5s;
+
+  filter:
+    drop-shadow(
+      0 0 15px
+      #ffb7dc
+    );
+
+  background:none;
+
+  padding:0;
+
+  appearance:none;
+
+  -webkit-appearance:none;
+
+}
+
+
+.candle.off{
+
+  filter:none;
+
+  opacity:.9;
+
+  transform:
+    scale(.92);
+
+}
+
+
+/* =========================================================
+   WISH MESSAGE
+========================================================= */
+
+.wish-message{
+
+  display:none;
+
+  margin-top:16px;
+
+  font-family:"Baloo 2";
+
+  font-size:
+    clamp(
+      21px,
+      5vw,
+      30px
+    );
+
+  font-weight:800;
+
+  color:var(--hot);
+
+  line-height:1.15;
+
+  animation:
+    wishAppear
+    .7s
+    cubic-bezier(.2,.8,.2,1);
+
+}
+
+
+.wish-message.show{
+
+  display:block;
+
+}
+
+
+@keyframes wishAppear{
+
+  from{
+
+    opacity:0;
+
+    transform:
+      translateY(15px)
+      scale(.95);
+
+  }
+
+  to{
+
+    opacity:1;
+
+    transform:none;
+
+  }
+
+}
+
+
+/* =========================================================
+   CALENDAR
+========================================================= */
+
+.calendar{
+
+  width:min(
+    92vw,
+    430px
+  );
+
+  max-width:100%;
+
+  background:#fff;
+
+  border-radius:24px;
+
+  box-shadow:
+    0 18px 40px
+    #7d4a8c25;
+
+  overflow:hidden;
+
+  border:5px solid #fff;
+
+  margin:20px auto;
+
+}
+
+
+.cal-head{
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--hot),
+      var(--purple)
+    );
+
+  color:#fff;
+
+  padding:16px;
+
+  font-family:Pacifico;
+
+  font-size:28px;
+
+}
+
+
+.days{
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(7,1fr);
+
+  gap:5px;
+
+  padding:15px;
+
+}
+
+
+.days span{
+
+  padding:8px 0;
+
+  font-weight:700;
+
+}
+
+
+.special{
+
+  background:#ffd0e7;
+
+  border-radius:50%;
+
+  color:#b33276;
+
+  outline:
+    3px dashed
+    #ff72b7;
+
+  outline-offset:2px;
+
+}
+
+
+/* =========================================================
+   ENVELOPE
+========================================================= */
+
+.envelope{
+
+  width:min(
+    80vw,
+    370px
+  );
+
+  height:235px;
+
+  max-width:100%;
+
+  background:#ffb4d8;
+
+  border-radius:20px;
+
+  position:relative;
+
+  box-shadow:
+    0 20px 40px
+    #7d4a8c25;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  transition:.8s;
+
+  cursor:pointer;
+
+  margin:auto;
+
+}
+
+
+.envelope:before{
+
+  content:"";
+
+  position:absolute;
+
+  inset:0;
+
+  background:#ffcae5;
+
+  clip-path:
+    polygon(
+      0 0,
+      50% 58%,
+      100% 0
+    );
+
+  z-index:2;
+
+  transition:.7s;
+
+  transform-origin:top;
+
+}
+
+
+.envelope.open:before{
+
+  transform:
+    rotateX(180deg);
+
+  opacity:.7;
+
+}
+
+
+.seal{
+
+  z-index:3;
+
+  font-size:48px;
+
+}
+
+
+/* =========================================================
+   LETTER
+========================================================= */
+
+.letter{
+
+  display:none;
+
+  width:min(
+    92vw,
+    650px
+  );
+
+  max-width:100%;
+
+  max-height:75svh;
+
+  overflow:auto;
+
+  background:#fffdf7;
+
+  border-radius:7px;
+
+  padding:
+    clamp(
+      25px,
+      6vw,
+      48px
+    );
+
+  box-shadow:
+    0 18px 40px
+    #7d4a8c30;
+
+  text-align:left;
+
+  transform:translateY(100vh);
+
+  animation:
+    letterUp
+    1.2s
+    cubic-bezier(.2,.8,.2,1)
+    forwards;
+
+  -webkit-overflow-scrolling:touch;
+
+}
+
+
+.letter.show{
+
+  display:block;
+
+}
+
+
+@keyframes letterUp{
+
+  to{
+
+    transform:none;
+
+  }
+
+}
+
+
+.letter h2{
+
+  font-family:"Baloo 2";
+
+  font-size:
+    clamp(27px,7vw,43px);
+
+  line-height:1.05;
+
+  color:#d93b91;
+
+  margin-bottom:20px;
+
+}
+
+
+.letter p{
+
+  font-family:"Quicksand";
+
+  font-size:
+    clamp(16px,4.5vw,20px);
+
+  line-height:1.8;
+
+  font-weight:600;
+
+}
+
+
+/* =========================================================
+   MEMORIES
+========================================================= */
+
+.memories{
+
+  align-items:center;
+
+  justify-content:center;
+
+  text-align:center;
+
+}
+
+
+.memories .card{
+
+  width:min(
+    94vw,
+    700px
+  );
+
+  overflow:hidden;
+
+}
+
+
+.memory-grid{
+
+  width:100%;
+
+  max-width:100%;
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(2,minmax(0,1fr));
+
+  gap:16px;
+
+  margin-top:25px;
+
+  padding:8px;
+
+  overflow:visible;
+
+}
+
+
+.memory{
+
+  width:100%;
+
+  min-width:0;
+
+  max-width:100%;
+
+  background:white;
+
+  padding:
+    8px 8px 22px;
+
+  box-shadow:
+    0 10px 25px
+    #7d4a8c25;
+
+  transition:.4s;
+
+  overflow:hidden;
+
+}
+
+
+.memory:nth-child(1){
+
+  transform:rotate(-2.5deg);
+
+}
+
+
+.memory:nth-child(2){
+
+  transform:rotate(2.5deg);
+
+}
+
+
+.memory:nth-child(3){
+
+  grid-column:
+    1 / -1;
+
+  width:100%;
+
+  justify-self:center;
+
+  transform:rotate(-1.5deg);
+
+}
+
+
+.memory:nth-child(4){
+
+  transform:rotate(2deg);
+
+}
+
+
+.memory:nth-child(5){
+
+  transform:rotate(-2deg);
+
+}
+
+
+.memory img{
+
+  width:100%;
+
+  max-width:100%;
+
+  aspect-ratio:1/1;
+
+  object-fit:cover;
+
+  display:block;
+
+}
+
+
+.tap-note{
+
+  margin-top:14px;
+
+  font-weight:700;
+
+}
+
+
+/* =========================================================
+   LANDSCAPE
+========================================================= */
+
+@media
+(orientation:landscape)
+and (max-height:600px){
+
+  .screen{
+
+    padding:
+      18px 35px;
+
+    align-items:center;
+
+  }
+
+
+  .card{
+
+    padding:20px;
+
+    max-width:700px;
+
+  }
+
+
+  .photo-frame,
+  .birthday-photo{
+
+    width:180px;
+
+  }
+
+
+  .memory-grid{
+
+    max-width:720px;
+
+    grid-template-columns:
+      repeat(5,minmax(0,1fr));
+
+    gap:12px;
+
+  }
+
+
+  .memory:nth-child(3){
+
+    grid-column:auto;
+
+    width:100%;
+
+  }
+
+
+  .memory{
+
+    padding-bottom:14px;
+
+  }
+
+
+  .letter{
+
+    max-height:82svh;
+
+    max-width:850px;
+
+  }
+
+
+  .calendar{
+
+    margin:12px auto;
+
+  }
+
+}
+
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media
+(max-width:380px){
+
+  .screen{
+
+    padding:
+      18px 14px;
+
+  }
+
+
+  .card{
+
+    width:96vw;
+
+    padding:20px 15px;
+
+    border-radius:26px;
+
+  }
+
+
+  .keypad{
+
+    max-width:250px;
+
+    gap:8px;
+
+  }
+
+
+  .key{
+
+    padding:13px 8px;
+
+  }
+
+
+  .memory-grid{
+
+    gap:11px;
+
+    padding:5px;
+
+  }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media
+(prefers-reduced-motion:reduce){
+
+  *{
+
+    animation-duration:.01ms !important;
+
+    scroll-behavior:auto !important;
+
+    transition:none !important;
+
+  }
+
+}
+
+</style>
+        </head>
+        <body>
+          <!-- =========================================================
+          🎵 BACKGROUND MUSIC
+          ========================================================= -->
+          <audio
+            id="backgroundMusic"
+            src="audio/birthday.mp3"
+            preload="auto"
+            loop
+            >
+          </audio>
+          <div id="app">
+            <!-- =========================================================
+            SCREEN 1 — PASSCODE
+            ========================================================= -->
+            <section
+              class="screen active full-center"
+              id="s1"
+              >
+              <div class="bg">
+              </div>
+              <div class="card">
+                <h1 class="script">
+                  A little secret...
+                </h1>
+                <p class="subtitle">
+                  Only someone special can enter 💌
+                </p>
+                <img
+                  class="photo-frame"
+                  src="images/passcode-couple.jpg"
+                  alt="Your photo together"
+                  >
+                  <p class="subtitle">
+                    Enter the 4-digit passcode
+                  </p>
+                  <div
+                    class="code"
+                    id="codeDots"
+                    >
+                    <span class="dot">
+                    </span>
+                    <span class="dot">
+                    </span>
+                    <span class="dot">
+                    </span>
+                    <span class="dot">
+                    </span>
+                  </div>
+                  <div
+                    class="keypad"
+                    id="keypad"
+                    >
+                    <button type="button" class="key" data-key="1">1</button>
+                    <button type="button" class="key" data-key="2">2</button>
+                    <button type="button" class="key" data-key="3">3</button>
+                    <button type="button" class="key" data-key="4">4</button>
+                    <button type="button" class="key" data-key="5">5</button>
+                    <button type="button" class="key" data-key="6">6</button>
+                    <button type="button" class="key" data-key="7">7</button>
+                    <button type="button" class="key" data-key="8">8</button>
+                    <button type="button" class="key" data-key="9">9</button>
+                    <button type="button" class="key" data-key="clear">⌫</button>
+                    <button type="button" class="key" data-key="0">0</button>
+                    <button type="button" class="key" data-key="enter">↵</button>
+                  </div>
+                  <div id="passMsg">
+                  </div>
+                </div>
+                <button
+                  class="hint"
+                  id="hintBtn"
+                  >
+                  💡 Hint
+                </button>
+                <div
+                  class="hint-box"
+                  id="hintBox"
+                  >
+                  Enter the Number related to You and Me🫦
+                </div>
+              </section>
+              <!-- =========================================================
+              SCREEN 2 — SURPRISE
+              ========================================================= -->
+              <section
+                class="screen full-center"
+                id="s2"
+                >
+                <div class="bg">
+                </div>
+                <div class="card">
+                  <div style="font-size:65px">
+                    🎀💗
+                  </div>
+                  <h1 class="title">
+                    I have a little<br>
+                    <span class="script">
+                      surprise
+                    </span>
+                    for you...
+                  </h1>
+                  <p class="subtitle">
+                    Wanna see it? 🥹🫶🏻
+                  </p>
+                  <div
+                    style="
+                    display:flex;
+                    gap:15px;
+                    justify-content:center;
+                    margin-top:25px;
+                    flex-wrap:wrap;
+                    "
+                    >
+                    <button
+                      class="primary"
+                      onclick="go('s6')"
+                      >
+                      YESSS 💗
+                    </button>
+                    <button
+                      class="secondary"
+                      onclick="go('s3')"
+                      >
+                      NO 😈
+                    </button>
+                  </div>
+                </div>
+              </section>
+              <!-- =========================================================
+              SCREEN 3 — NO
+              ========================================================= -->
+              <section
+                class="screen full-center"
+                id="s3"
+                >
+                <div class="bg">
+                </div>
+                <div class="card">
+                  <div class="no-reaction">
+                    HOW DARE YOU<br>
+                    CLICK NO?! 😭
+                  </div>
+                  <img
+                    class="gif-slot"
+                    src="gifs/teddy.gif"
+                    alt="Cute teddy GIF"
+                    >
+                    <p class="subtitle">
+                      That button was NOT for you 🤨💗
+                    </p>
+                    <button
+                      class="primary"
+                      style="margin-top:20px"
+                      onclick="go('s2')"
+                      >
+                      Okay okay... 😭💗
+                    </button>
+                  </div>
+                </section>
+                <!-- =========================================================
+                SCREEN 4 — BIRTHDAY
+                ========================================================= -->
+                <section
+                  class="screen celebrate"
+                  id="s6"
+                  >
+                  <div class="bg">
+                  </div>
+                  <div
+                    class="confetti"
+                    id="confetti1"
+                    >
+                  </div>
+                  <div
+                    class="balloon"
+                    style="--x:5%;--t:10s;--s:-25px"
+                    >
+                    🎈
+                  </div>
+                  <div
+                    class="balloon"
+                    style="--x:78%;--t:12s;--s:30px"
+                    >
+                    🎈
+                  </div>
+                  <div
+                    class="balloon"
+                    style="--x:45%;--t:14s;--s:-15px"
+                    >
+                    🎈
+                  </div>
+                  <div class="card">
+                    <p
+                      class="script"
+                      style="font-size:30px"
+                      >
+                      For my Gulaboo... 💗
+                    </p>
+                    <h1 class="title">
+                      HAPPY<br>
+                      <span style="color:var(--hot)">
+                        BIRTHDAY
+                      </span>
+                      🎂
+                    </h1>
+                    <img
+                      class="birthday-photo"
+                      src="images/birthday-couple.jpg"
+                      alt="Birthday photo of you two"
+                      >
+                      <p class="subtitle">
+                        Today is all about YOUUU 🫶🏻🧿
+                      </p>
+                      <button
+                        class="primary"
+                        style="margin-top:20px"
+                        onclick="go('s7')"
+                        >
+                        Next 💗
+                      </button>
+                    </div>
+                  </section>
+                  <!-- =========================================================
+                  SCREEN 5 — CANDLE
+                  ========================================================= -->
+                  <section
+                    class="screen full-center"
+                    id="s7"
+                    >
+                    <div class="bg">
+                    </div>
+                    <div
+                      class="confetti"
+                      id="confetti2"
+                      >
+                    </div>
+                    <div class="card">
+                      <p
+                        class="script"
+                        style="font-size:34px"
+                        >
+                        Make a wish... ✨
+                      </p>
+                      <div class="cake">
+                        🎂
+                      </div>
+                      <button
+                        class="candle"
+                        id="candle"
+                        aria-label="Blow the candle"
+                        >
+                        🕯️
+                      </button>
+                      <h1
+                        class="title"
+                        style="
+                        font-size:
+                        clamp(35px,9vw,58px)
+                        "
+                        >
+                        Blow the candle 💨
+                      </h1>
+                      <p class="tap-note">
+                        Tap the candle to blow it out 💗
+                      </p>
+                      <div
+                        class="wish-message"
+                        id="wishMessage"
+                        >
+                        Your wish will be heard and completed 💗
+                      </div>
+                      <button
+                        class="primary"
+                        id="wishNext"
+                        style="
+                        display:none;
+                        margin-top:18px
+                        "
+                        onclick="go('s8')"
+                        >
+                        Wish made! 🎊
+                      </button>
+                    </div>
+                  </section>
+                  <!-- =========================================================
+                  SCREEN 6 — 10 OCTOBER
+                  ========================================================= -->
+                  <section
+                    class="screen full-center"
+                    id="s8"
+                    >
+                    <div class="bg">
+                    </div>
+                    <div class="card">
+                      <h1 class="title">
+                        It's your
+                        <span class="script">
+                          day
+                        </span>
+                        💗
+                      </h1>
+                      <p class="subtitle">
+                        10 October ✨
+                      </p>
+                      <div class="calendar">
+                        <div class="cal-head">
+                          October 🎀
+                        </div>
+                        <div class="days">
+                          <span>S</span>
+                          <span>M</span>
+                          <span>T</span>
+                          <span>W</span>
+                          <span>T</span>
+                          <span>F</span>
+                          <span>S</span>
+                          <span>
+                          </span>
+                          <span>
+                          </span>
+                          <span>
+                          </span>
+                          <span>
+                          </span>
+                          <span>1</span>
+                          <span>2</span>
+                          <span>3</span>
+                          <span>4</span>
+                          <span>5</span>
+                          <span>6</span>
+                          <span>7</span>
+                          <span>8</span>
+                          <span>9</span>
+                          <span class="special">
+                            10
+                          </span>
+                          <span>11</span>
+                          <span>12</span>
+                          <span>13</span>
+                          <span>14</span>
+                          <span>15</span>
+                          <span>16</span>
+                          <span>17</span>
+                          <span>18</span>
+                          <span>19</span>
+                          <span>20</span>
+                          <span>21</span>
+                          <span>22</span>
+                          <span>23</span>
+                          <span>24</span>
+                          <span>25</span>
+                          <span>26</span>
+                          <span>27</span>
+                          <span>28</span>
+                          <span>29</span>
+                          <span>30</span>
+                          <span>31</span>
+                        </div>
+                      </div>
+                      <button
+                        class="primary"
+                        style="margin-top:22px"
+                        onclick="go('s9')"
+                        >
+                        There's something for you... 💌
+                      </button>
+                    </div>
+                  </section>
+                  <!-- =========================================================
+                  SCREEN 7 — LETTER
+                  ========================================================= -->
+                  <section
+                    class="screen full-center"
+                    id="s9"
+                    >
+                    <div class="bg">
+                    </div>
+                    <div id="envelopeWrap">
+                      <p
+                        class="script"
+                        style="
+                        font-size:32px;
+                        margin-bottom:20px
+                        "
+                        >
+                        A little letter for you... 💌
+                      </p>
+                      <div
+                        class="envelope"
+                        id="envelope"
+                        >
+                        <div class="seal">
+                          💗
+                        </div>
+                      </div>
+                      <p class="tap-note">
+                        Tap the letter to open it
+                      </p>
+                    </div>
+                    <article
+                      class="letter"
+                      id="letter"
+                      >
+                      <h2>
+                        Happiessttt Birthdaayyy too myyy babyyy myyy jaanuuu meraaa cuttuuuuu bacchaaaa💗🫦🧿🥹🫶🏻
+                      </h2>
+                      <p>
+                        This is your day and i hope I’ll make it very special for youuu gulaabooo💗🧿🤭….i can’t be present with you to celebrate but even in this distance i ensure to make you feel loved soo muchhhh babyyy 🫶🏻💋…. Alsooo my biggestttt shoutout Mummy jiii and Papa jiii forrr bringinggg youuu intooo thisss world at my timeee to blesss meee withhh a baddieeee babyyyy , DEVII mere jeevan kiii hehehehehehhehe💗🧿😚….Jaiiii hooo Maalkinnnn hmeshaaa aappp aiseeee hiiii khusshhhh rhoooo aapkooo wohhh saariii chizein mile ho aapp panaaa chahtiii hooo 🧿🧿🔱….I loveeee youuuu sooo sooo mucchhhh meraaa bacchhaaaa mereee chachaaa jaannnnn onceee againnnn Happyyyyy walaaaaa Birthddaayyyyyyy Gulaaaboooooo😈😈🤭🤭🫶🏻🫶🏻🔱🔱💋💗💗🫦🧿🧿🧿
+                      </p>
+                      <div
+                        style="
+                        text-align:center;
+                        margin-top:25px
+                        "
+                        >
+                        <button
+                          class="primary"
+                          onclick="go('s10')"
+                          >
+                          Our memories 📸💗
+                        </button>
+                      </div>
+                    </article>
+                  </section>
+                  <!-- =========================================================
+                  SCREEN 8 — MEMORIES
+                  ========================================================= -->
+                  <section
+                    class="screen memories"
+                    id="s10"
+                    >
+                    <div class="bg">
+                    </div>
+                    <div class="card">
+                      <h1
+                        class="title"
+                        style="
+                        font-size:
+                        clamp(32px,9vw,58px)
+                        "
+                        >
+                        Some memories<br>
+                        of
+                        <span class="script">
+                          US
+                        </span>
+                        :-💗🧿
+                      </h1>
+                      <div class="memory-grid">
+                        <div class="memory">
+                          <img
+                            src="images/memory1.jpg"
+                            alt="Memory 1"
+                            loading="lazy"
+                            >
+                          </div>
+                          <div class="memory">
+                            <img
+                              src="images/memory2.jpg"
+                              alt="Memory 2"
+                              loading="lazy"
+                              >
+                            </div>
+                            <div class="memory">
+                              <img
+                                src="images/memory3.jpg"
+                                alt="Memory 3"
+                                loading="lazy"
+                                >
+                              </div>
+                              <div class="memory">
+                                <img
+                                  src="images/memory4.jpg"
+                                  alt="Memory 4"
+                                  loading="lazy"
+                                  >
+                                </div>
+                                <div class="memory">
+                                  <img
+                                    src="images/memory5.jpg"
+                                    alt="Memory 5"
+                                    loading="lazy"
+                                    >
+                                  </div>
+                                </div>
+                                <p class="tap-note">
+                                  Made with way too much love. 💗🫶🏻
+                                </p>
+                              </div>
+                            </section>
+                          </div>
+                          <script>
+
+/* =========================================================
+   🎵 BACKGROUND MUSIC
+========================================================= */
+
+const backgroundMusic =
+  document.getElementById("backgroundMusic");
+
+let musicStarted = false;
+
+
+/*
+   iPhone/Safari normally blocks autoplay.
+
+   So we start the music after the visitor's
+   first interaction with the website.
+*/
+
+function startMusic(){
+
+  if(musicStarted){
+    return;
+  }
+
+  musicStarted = true;
+
+  backgroundMusic.volume = 0.55;
+
+  backgroundMusic.play()
+    .catch(() => {
+
+      musicStarted = false;
+
+    });
+
+}
+
+
+/*
+   First tap / click / touch anywhere
+*/
+
+document.addEventListener(
+  "pointerdown",
+  startMusic,
+  {
+    once:true,
+    passive:true
+  }
+);
+
+
+/* =========================================================
+   💗 PERSONALIZATION
+========================================================= */
+
+const PASSCODE = "1016";
+
+let entered = "";
+
+
+/* =========================================================
+   SCREEN NAVIGATION
+========================================================= */
+
+const screens =
+  [...document.querySelectorAll(".screen")];
+
+
+function go(id){
+
+  screens.forEach(
+    screen =>
+    screen.classList.remove("active")
+  );
+
+
+  const target =
+    document.getElementById(id);
+
+
+  if(!target){
+    return;
+  }
+
+
+  target.classList.add("active");
+
+
+  target.scrollTop = 0;
+
+
+  window.scrollTo({
+    top:0,
+    behavior:"smooth"
+  });
+
+
+  if(id === "s6"){
+
+    launchConfetti(
+      "confetti1",
+      90
+    );
+
+  }
+
+
+  if(id === "s7"){
+
+    launchConfetti(
+      "confetti2",
+      45
+    );
+
+  }
+
+}
+
+
+/* =========================================================
+   PASSCODE
+========================================================= */
+
+const dots =
+  [...document.querySelectorAll(
+    "#codeDots .dot"
+  )];
+
+
+const passMsg =
+  document.getElementById(
+    "passMsg"
+  );
+
+
+const keypad =
+  document.getElementById(
+    "keypad"
+  );
+
+
+function updateDots(){
+
+  dots.forEach(
+    (dot,index)=>{
+
+      dot.classList.toggle(
+        "filled",
+        index < entered.length
+      );
+
+    }
+  );
+
+}
+
+
+function resetCode(message=""){
+
+  entered = "";
+
+  updateDots();
+
+  passMsg.textContent =
+    message;
+
+}
+
+
+function checkCode(){
+
+  if(entered === PASSCODE){
+
+    passMsg.textContent =
+      "Unlocked 💗";
+
+
+    keypad.style.pointerEvents =
+      "none";
+
+
+    setTimeout(()=>{
+
+      keypad.style.pointerEvents =
+        "";
+
+
+      resetCode();
+
+
+      go("s2");
+
+
+    },500);
+
+  }
+
+
+  else{
+
+    passMsg.textContent =
+      "Wrong passcode… try again 👀";
+
+
+    dots.forEach(
+      dot =>
+      dot.classList.add("wrong")
+    );
+
+
+    setTimeout(()=>{
+
+      dots.forEach(
+        dot =>
+        dot.classList.remove("wrong")
+      );
+
+
+      resetCode();
+
+
+    },650);
+
+  }
+
+}
+
+
+/* =========================================================
+   KEYPAD
+========================================================= */
+
+keypad.addEventListener(
+  "click",
+  function(event){
+
+    const button =
+      event.target.closest(
+        "button[data-key]"
+      );
+
+
+    if(!button){
+      return;
+    }
+
+
+    const key =
+      button.dataset.key;
+
+
+    if(key === "clear"){
+
+      entered =
+        entered.slice(0,-1);
+
+
+      passMsg.textContent =
+        "";
+
+
+      updateDots();
+
+      return;
+
+    }
+
+
+    if(key === "enter"){
+
+      if(entered.length === 4){
+
+        checkCode();
+
+      }
+
+      return;
+
+    }
+
+
+    if(
+      /^[0-9]$/.test(key)
+      &&
+      entered.length < 4
+    ){
+
+      entered += key;
+
+      passMsg.textContent =
+        "";
+
+
+      updateDots();
+
+
+      if(entered.length === 4){
+
+        setTimeout(
+          checkCode,
+          180
+        );
+
+      }
+
+    }
+
+  }
+);
+
+
+/* =========================================================
+   HINT
+========================================================= */
+
+const hintBtn =
+  document.getElementById(
+    "hintBtn"
+  );
+
+
+const hintBox =
+  document.getElementById(
+    "hintBox"
+  );
+
+
+hintBtn.addEventListener(
+  "click",
+  function(event){
+
+    event.stopPropagation();
+
+
+    hintBox.classList.toggle(
+      "show"
+    );
+
+  }
+);
+
+
+hintBox.addEventListener(
+  "click",
+  function(event){
+
+    event.stopPropagation();
+
+  }
+);
+
+
+document.addEventListener(
+  "click",
+  function(){
+
+    hintBox.classList.remove(
+      "show"
+    );
+
+  }
+);
+
+
+/* =========================================================
+   COMPUTER KEYBOARD SUPPORT
+========================================================= */
+
+document.addEventListener(
+  "keydown",
+  function(event){
+
+    if(
+      !document
+      .getElementById("s1")
+      .classList
+      .contains("active")
+    ){
+
+      return;
+
+    }
+
+
+    if(
+      /^[0-9]$/.test(event.key)
+      &&
+      entered.length < 4
+    ){
+
+      entered += event.key;
+
+      updateDots();
+
+
+      if(entered.length === 4){
+
+        setTimeout(
+          checkCode,
+          180
+        );
+
+      }
+
+    }
+
+
+    if(event.key === "Backspace"){
+
+      entered =
+        entered.slice(0,-1);
+
+
+      updateDots();
+
+    }
+
+
+    if(
+      event.key === "Enter"
+      &&
+      entered.length === 4
+    ){
+
+      checkCode();
+
+    }
+
+  }
+);
+
+
+/* =========================================================
+   CONFETTI
+========================================================= */
+
+function launchConfetti(
+  id,
+  count
+){
+
+  const box =
+    document.getElementById(id);
+
+
+  if(
+    !box ||
+    box.dataset.ready
+  ){
+
+    return;
+
+  }
+
+
+  box.dataset.ready = "1";
+
+
+  const colors = [
+
+    "#ff5cab",
+    "#a982ff",
+    "#ffd1e7",
+    "#ffffff",
+    "#8e69df",
+    "#ffb0d5"
+
+  ];
+
+
+  for(
+    let i=0;
+    i<count;
+    i++
+  ){
+
+    const p =
+      document.createElement("i");
+
+
+    p.style.setProperty(
+      "--x",
+      Math.random()*100 + "%"
+    );
+
+
+    p.style.setProperty(
+      "--d",
+      3 + Math.random()*5 + "s"
+    );
+
+
+    p.style.setProperty(
+      "--r",
+      Math.random()*360 + "deg"
+    );
+
+
+    p.style.setProperty(
+      "--c",
+      colors[
+        Math.floor(
+          Math.random()*colors.length
+        )
+      ]
+    );
+
+
+    p.style.animationDelay =
+      -Math.random()*5 + "s";
+
+
+    box.appendChild(p);
+
+  }
+
+}
+
+
+/* =========================================================
+   CANDLE
+========================================================= */
+
+document
+.getElementById("candle")
+.addEventListener(
+  "click",
+  function(){
+
+    const candle =
+      document.getElementById(
+        "candle"
+      );
+
+
+    candle.textContent =
+      "🕯️";
+
+
+    candle.classList.add(
+      "off"
+    );
+
+
+    document
+    .getElementById(
+      "wishMessage"
+    )
+    .classList.add(
+      "show"
+    );
+
+
+    document
+    .getElementById(
+      "wishNext"
+    )
+    .style.display =
+      "inline-block";
+
+
+    launchConfetti(
+      "confetti2",
+      75
+    );
+
+  }
+);
+
+
+/* =========================================================
+   ENVELOPE
+========================================================= */
+
+document
+.getElementById("envelope")
+.addEventListener(
+  "click",
+  function(){
+
+    const envelope =
+      document.getElementById(
+        "envelope"
+      );
+
+
+    envelope.classList.add(
+      "open"
+    );
+
+
+    setTimeout(()=>{
+
+      document
+      .getElementById(
+        "envelopeWrap"
+      )
+      .style.display =
+        "none";
+
+
+      document
+      .getElementById(
+        "letter"
+      )
+      .classList.add(
+        "show"
+      );
+
+
+    },650);
+
+  }
+);
+
+</script>
+                        </body>
+                      </html>
