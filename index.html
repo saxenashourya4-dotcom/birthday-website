@@ -1,21 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-      <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1, viewport-fit=cover"
-        >
-        <meta name="theme-color" content="#f7c8e0">
-          <title>For My Gulaboo 💗</title>
-          <style>
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1, viewport-fit=cover"
+>
+
+<meta name="theme-color" content="#f7c8e0">
+
+<title>For My Gulaboo 💗</title>
+
+<style>
 
 /* =========================================================
    💗 ORIGINAL DESIGN — POLISHED VERSION
 ========================================================= */
 
 @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&family=Pacifico&family=Quicksand:wght@500;600;700&display=swap');
-
 
 :root{
   --pink:#ff8fc7;
@@ -27,19 +31,16 @@
   --card:rgba(255,255,255,.86);
 }
 
-
 *{
   box-sizing:border-box;
   -webkit-tap-highlight-color:transparent;
 }
-
 
 html{
   scroll-behavior:smooth;
   background:#f8d9ee;
   overflow-x:hidden;
 }
-
 
 body{
   margin:0;
@@ -51,19 +52,16 @@ body{
   overflow-x:hidden;
 }
 
-
 #app{
   width:100%;
   min-height:100svh;
   overflow-x:hidden;
 }
 
-
 button,
 input{
   font:inherit;
 }
-
 
 button{
   cursor:pointer;
@@ -85,16 +83,11 @@ button{
 ========================================================= */
 
 .screen{
-
   min-height:100svh;
   min-height:100dvh;
-
   width:100%;
-
   position:relative;
-
   display:none;
-
   overflow-x:hidden;
   overflow-y:auto;
 
@@ -105,26 +98,18 @@ button{
     max(22px,env(safe-area-inset-left));
 
   isolation:isolate;
-
   overscroll-behavior-x:none;
-
 }
 
-
 .screen.active{
-
   display:flex;
-
   animation:
     screenIn
     .8s
     cubic-bezier(.2,.8,.2,1);
-
 }
 
-
 @keyframes screenIn{
-
   from{
     opacity:0;
     transform:translateY(22px) scale(.985);
@@ -134,7 +119,6 @@ button{
     opacity:1;
     transform:none;
   }
-
 }
 
 
@@ -143,17 +127,12 @@ button{
 ========================================================= */
 
 .bg{
-
   position:absolute;
-
   inset:0;
-
   z-index:-3;
-
   pointer-events:none;
 
   background:
-
     radial-gradient(
       circle at 15% 15%,
       #fff 0 1.5px,
@@ -177,23 +156,16 @@ button{
     80px 80px,
     105px 105px,
     100% 100%;
-
 }
-
 
 .bg:before,
 .bg:after{
-
   content:"";
-
   position:absolute;
-
   inset:-10%;
-
   pointer-events:none;
 
   background:
-
     radial-gradient(
       circle at 20% 70%,
       rgba(255,255,255,.6) 0 3px,
@@ -211,29 +183,19 @@ button{
     10s
     linear
     infinite;
-
 }
-
 
 .bg:after{
-
   animation-duration:15s;
-
   transform:scale(1.2);
-
 }
 
-
 @keyframes drift{
-
   to{
-
     transform:
       translate3d(3%,-2%,0)
       rotate(2deg);
-
   }
-
 }
 
 
@@ -242,63 +204,42 @@ button{
 ========================================================= */
 
 .decor{
-
   position:absolute;
-
   inset:0;
-
   pointer-events:none;
-
   z-index:-1;
-
 }
-
 
 .heart,
 .spark{
-
   position:absolute;
-
   animation:
     float
     6s
     ease-in-out
     infinite;
-
 }
 
-
 .heart{
-
   font-size:
     clamp(
       18px,
       5vw,
       32px
     );
-
 }
-
 
 .spark{
-
   font-size:18px;
-
 }
 
-
 @keyframes float{
-
   50%{
-
     transform:
       translateY(-22px)
       rotate(8deg);
-
     opacity:.9;
-
   }
-
 }
 
 
@@ -307,7 +248,6 @@ button{
 ========================================================= */
 
 .card{
-
   width:min(
     92vw,
     520px
@@ -341,7 +281,6 @@ button{
   text-align:center;
 
   position:relative;
-
 }
 
 
@@ -352,25 +291,16 @@ button{
 h1,
 h2,
 p{
-
   margin:0;
-
 }
-
 
 .script{
-
   font-family:Pacifico,cursive;
-
   color:var(--hot);
-
 }
 
-
 .title{
-
   font-family:"Baloo 2";
-
   font-weight:800;
 
   font-size:
@@ -381,12 +311,9 @@ p{
     );
 
   line-height:.92;
-
 }
 
-
 .subtitle{
-
   font-size:
     clamp(
       18px,
@@ -395,18 +322,12 @@ p{
     );
 
   margin-top:12px;
-
   font-weight:700;
-
 }
 
-
 .small{
-
   font-size:14px;
-
   opacity:.75;
-
 }
 
 
@@ -415,7 +336,6 @@ p{
 ========================================================= */
 
 .photo-frame{
-
   width:min(
     68vw,
     270px
@@ -442,12 +362,9 @@ p{
   margin:20px auto;
 
   display:block;
-
 }
 
-
 .birthday-photo{
-
   width:min(
     66vw,
     290px
@@ -470,7 +387,6 @@ p{
   display:block;
 
   margin:20px auto;
-
 }
 
 
@@ -480,11 +396,8 @@ p{
 
 .primary,
 .secondary{
-
   padding:14px 24px;
-
   border-radius:999px;
-
   font-weight:800;
 
   box-shadow:
@@ -494,12 +407,9 @@ p{
   transition:
     transform .25s ease,
     box-shadow .25s ease;
-
 }
 
-
 .primary{
-
   background:
     linear-gradient(
       135deg,
@@ -508,36 +418,25 @@ p{
     );
 
   color:white;
-
 }
-
 
 .secondary{
-
   background:white;
-
   color:var(--deep);
-
 }
-
 
 .primary:hover,
 .secondary:hover{
-
   transform:translateY(-3px);
 
   box-shadow:
     0 12px 22px
     #7d4a8c30;
-
 }
-
 
 .primary:active,
 .secondary:active{
-
   transform:scale(.95);
-
 }
 
 
@@ -546,13 +445,9 @@ p{
 ========================================================= */
 
 .full-center{
-
   align-items:center;
-
   justify-content:center;
-
   text-align:center;
-
 }
 
 
@@ -561,39 +456,23 @@ p{
 ========================================================= */
 
 .code{
-
   display:flex;
-
   justify-content:center;
-
   gap:12px;
-
   margin:20px;
-
 }
-
 
 .dot{
-
   width:20px;
-
   height:20px;
-
   flex:0 0 20px;
-
   border-radius:50%;
-
   border:2px solid var(--purple);
-
   background:#fff;
-
   transition:.18s ease;
-
 }
 
-
 .dot.filled{
-
   background:var(--hot);
 
   box-shadow:
@@ -606,46 +485,30 @@ p{
     dotPop
     .16s
     ease-out;
-
 }
 
-
 .dot.wrong{
-
   background:#ff5b9d;
-
   border-color:#ff5b9d;
 
   animation:
     shake
     .35s;
-
 }
 
-
 @keyframes dotPop{
-
   from{
-
     transform:scale(.75);
-
     opacity:.5;
-
   }
 
   to{
-
     transform:scale(1.12);
-
     opacity:1;
-
   }
-
 }
 
-
 @keyframes shake{
-
   25%{
     transform:translateX(-5px);
   }
@@ -657,12 +520,9 @@ p{
   75%{
     transform:translateX(-4px);
   }
-
 }
 
-
 .keypad{
-
   display:grid;
 
   grid-template-columns:
@@ -675,20 +535,14 @@ p{
   width:100%;
 
   max-width:280px;
-
 }
 
-
 .key{
-
   background:#fff;
-
   border-radius:18px;
-
   padding:15px;
 
   font-size:20px;
-
   font-weight:800;
 
   color:var(--deep);
@@ -698,27 +552,17 @@ p{
     #7d4a8c1c;
 
   transition:.15s;
-
 }
-
 
 .key:active{
-
   transform:scale(.91);
-
   background:#ffe3f1;
-
 }
 
-
 #passMsg{
-
   height:22px;
-
   color:#e34b91;
-
   font-weight:800;
-
 }
 
 
@@ -727,7 +571,6 @@ p{
 ========================================================= */
 
 .hint{
-
   position:fixed;
 
   right:
@@ -759,12 +602,9 @@ p{
     #7d4a8c25;
 
   z-index:100;
-
 }
 
-
 .hint-box{
-
   display:none;
 
   position:fixed;
@@ -791,48 +631,34 @@ p{
   font-weight:700;
 
   z-index:101;
-
 }
 
-
 .hint-box.show{
-
   display:block;
 
   animation:
     pop
     .3s;
-
 }
 
-
 @keyframes pop{
-
   from{
-
     opacity:0;
-
     transform:scale(.9);
-
   }
 
   to{
-
     opacity:1;
-
     transform:none;
-
   }
-
 }
 
 
 /* =========================================================
-   NO SCREEN
+   NO SCREEN — TEDDY GIF
 ========================================================= */
 
 .no-reaction{
-
   font-family:"Baloo 2";
 
   font-size:
@@ -843,31 +669,46 @@ p{
     );
 
   font-weight:800;
-
   color:var(--hot);
-
 }
 
+.teddy{
+  width:
+    clamp(
+      150px,
+      45vw,
+      240px
+    );
 
-.gif-slot{
+  max-width:80%;
 
-  width:min(
-    55vw,
-    240px
-  );
-
-  max-width:100%;
-
-  height:170px;
+  height:auto;
 
   object-fit:contain;
 
-  border-radius:20px;
-
-  margin:15px auto;
+  margin:20px auto;
 
   display:block;
 
+  animation:
+    teddyBounce
+    1.5s
+    ease-in-out
+    infinite;
+
+  filter:
+    drop-shadow(
+      0 12px 18px
+      rgba(125,74,140,.18)
+    );
+}
+
+@keyframes teddyBounce{
+  50%{
+    transform:
+      translateY(-10px)
+      rotate(3deg);
+  }
 }
 
 
@@ -876,13 +717,9 @@ p{
 ========================================================= */
 
 .celebrate{
-
   align-items:center;
-
   justify-content:center;
-
   text-align:center;
-
 }
 
 
@@ -891,26 +728,17 @@ p{
 ========================================================= */
 
 .confetti{
-
   position:absolute;
-
   inset:0;
-
   pointer-events:none;
-
   overflow:hidden;
-
   z-index:4;
-
 }
 
-
 .confetti i{
-
   position:absolute;
 
   width:8px;
-
   height:15px;
 
   top:-20px;
@@ -927,22 +755,16 @@ p{
     rotate(var(--r));
 
   background:var(--c);
-
 }
 
-
 @keyframes fall{
-
   to{
-
     top:110%;
 
     transform:
       translateX(30px)
       rotate(720deg);
-
   }
-
 }
 
 
@@ -951,7 +773,6 @@ p{
 ========================================================= */
 
 .balloon{
-
   position:absolute;
 
   bottom:-100px;
@@ -974,23 +795,17 @@ p{
   z-index:-1;
 
   pointer-events:none;
-
 }
 
-
 @keyframes rise{
-
   to{
-
     transform:
       translateY(-125svh)
       translateX(var(--s))
       rotate(8deg);
 
     opacity:.15;
-
   }
-
 }
 
 
@@ -999,7 +814,6 @@ p{
 ========================================================= */
 
 .cake{
-
   font-size:
     clamp(
       70px,
@@ -1012,12 +826,9 @@ p{
       0 10px 10px
       #8b4b9830
     );
-
 }
 
-
 .candle{
-
   display:inline-block;
 
   font-size:65px;
@@ -1037,19 +848,14 @@ p{
   appearance:none;
 
   -webkit-appearance:none;
-
 }
 
-
 .candle.off{
-
   filter:none;
-
   opacity:.9;
 
   transform:
     scale(.92);
-
 }
 
 
@@ -1058,7 +864,6 @@ p{
 ========================================================= */
 
 .wish-message{
-
   display:none;
 
   margin-top:16px;
@@ -1082,37 +887,25 @@ p{
     wishAppear
     .7s
     cubic-bezier(.2,.8,.2,1);
-
 }
-
 
 .wish-message.show{
-
   display:block;
-
 }
 
-
 @keyframes wishAppear{
-
   from{
-
     opacity:0;
 
     transform:
       translateY(15px)
       scale(.95);
-
   }
 
   to{
-
     opacity:1;
-
     transform:none;
-
   }
-
 }
 
 
@@ -1121,7 +914,6 @@ p{
 ========================================================= */
 
 .calendar{
-
   width:min(
     92vw,
     430px
@@ -1142,12 +934,9 @@ p{
   border:5px solid #fff;
 
   margin:20px auto;
-
 }
 
-
 .cal-head{
-
   background:
     linear-gradient(
       135deg,
@@ -1162,12 +951,9 @@ p{
   font-family:Pacifico;
 
   font-size:28px;
-
 }
 
-
 .days{
-
   display:grid;
 
   grid-template-columns:
@@ -1176,21 +962,14 @@ p{
   gap:5px;
 
   padding:15px;
-
 }
-
 
 .days span{
-
   padding:8px 0;
-
   font-weight:700;
-
 }
 
-
 .special{
-
   background:#ffd0e7;
 
   border-radius:50%;
@@ -1202,7 +981,6 @@ p{
     #ff72b7;
 
   outline-offset:2px;
-
 }
 
 
@@ -1211,7 +989,6 @@ p{
 ========================================================= */
 
 .envelope{
-
   width:min(
     80vw,
     370px
@@ -1242,12 +1019,9 @@ p{
   cursor:pointer;
 
   margin:auto;
-
 }
 
-
 .envelope:before{
-
   content:"";
 
   position:absolute;
@@ -1268,26 +1042,18 @@ p{
   transition:.7s;
 
   transform-origin:top;
-
 }
 
-
 .envelope.open:before{
-
   transform:
     rotateX(180deg);
 
   opacity:.7;
-
 }
 
-
 .seal{
-
   z-index:3;
-
   font-size:48px;
-
 }
 
 
@@ -1296,7 +1062,6 @@ p{
 ========================================================= */
 
 .letter{
-
   display:none;
 
   width:min(
@@ -1336,30 +1101,19 @@ p{
     forwards;
 
   -webkit-overflow-scrolling:touch;
-
 }
-
 
 .letter.show{
-
   display:block;
-
 }
-
 
 @keyframes letterUp{
-
   to{
-
     transform:none;
-
   }
-
 }
 
-
 .letter h2{
-
   font-family:"Baloo 2";
 
   font-size:
@@ -1370,12 +1124,9 @@ p{
   color:#d93b91;
 
   margin-bottom:20px;
-
 }
 
-
 .letter p{
-
   font-family:"Quicksand";
 
   font-size:
@@ -1384,7 +1135,6 @@ p{
   line-height:1.8;
 
   font-weight:600;
-
 }
 
 
@@ -1393,32 +1143,22 @@ p{
 ========================================================= */
 
 .memories{
-
   align-items:center;
-
   justify-content:center;
-
   text-align:center;
-
 }
 
-
 .memories .card{
-
   width:min(
     94vw,
     700px
   );
 
   overflow:hidden;
-
 }
 
-
 .memory-grid{
-
   width:100%;
-
   max-width:100%;
 
   display:grid;
@@ -1433,12 +1173,9 @@ p{
   padding:8px;
 
   overflow:visible;
-
 }
 
-
 .memory{
-
   width:100%;
 
   min-width:0;
@@ -1457,26 +1194,17 @@ p{
   transition:.4s;
 
   overflow:hidden;
-
 }
-
 
 .memory:nth-child(1){
-
   transform:rotate(-2.5deg);
-
 }
-
 
 .memory:nth-child(2){
-
   transform:rotate(2.5deg);
-
 }
 
-
 .memory:nth-child(3){
-
   grid-column:
     1 / -1;
 
@@ -1485,28 +1213,18 @@ p{
   justify-self:center;
 
   transform:rotate(-1.5deg);
-
 }
-
 
 .memory:nth-child(4){
-
   transform:rotate(2deg);
-
 }
-
 
 .memory:nth-child(5){
-
   transform:rotate(-2deg);
-
 }
 
-
 .memory img{
-
   width:100%;
-
   max-width:100%;
 
   aspect-ratio:1/1;
@@ -1514,16 +1232,11 @@ p{
   object-fit:cover;
 
   display:block;
-
 }
 
-
 .tap-note{
-
   margin-top:14px;
-
   font-weight:700;
-
 }
 
 
@@ -1536,75 +1249,52 @@ p{
 and (max-height:600px){
 
   .screen{
-
     padding:
       18px 35px;
 
     align-items:center;
-
   }
-
 
   .card{
-
     padding:20px;
-
     max-width:700px;
-
   }
-
 
   .photo-frame,
   .birthday-photo{
-
     width:180px;
-
   }
 
+  .teddy{
+    width:150px;
+  }
 
   .memory-grid{
-
     max-width:720px;
 
     grid-template-columns:
       repeat(5,minmax(0,1fr));
 
     gap:12px;
-
   }
-
 
   .memory:nth-child(3){
-
     grid-column:auto;
-
     width:100%;
-
   }
-
 
   .memory{
-
     padding-bottom:14px;
-
   }
-
 
   .letter{
-
     max-height:82svh;
-
     max-width:850px;
-
   }
-
 
   .calendar{
-
     margin:12px auto;
-
   }
-
 }
 
 
@@ -1616,48 +1306,33 @@ and (max-height:600px){
 (max-width:380px){
 
   .screen{
-
     padding:
       18px 14px;
-
   }
-
 
   .card{
-
     width:96vw;
-
     padding:20px 15px;
-
     border-radius:26px;
-
   }
-
 
   .keypad{
-
     max-width:250px;
-
     gap:8px;
-
   }
-
 
   .key{
-
     padding:13px 8px;
-
   }
-
 
   .memory-grid{
-
     gap:11px;
-
     padding:5px;
-
   }
 
+  .teddy{
+    width:170px;
+  }
 }
 
 
@@ -1669,512 +1344,718 @@ and (max-height:600px){
 (prefers-reduced-motion:reduce){
 
   *{
-
     animation-duration:.01ms !important;
-
     scroll-behavior:auto !important;
-
     transition:none !important;
-
   }
 
 }
 
 </style>
-        </head>
-        <body>
-          <!-- =========================================================
-          🎵 BACKGROUND MUSIC
-          ========================================================= -->
-          <audio
-            id="backgroundMusic"
-            src="audio/birthday.mp3"
-            preload="auto"
-            loop
-            >
-          </audio>
-          <div id="app">
-            <!-- =========================================================
-            SCREEN 1 — PASSCODE
-            ========================================================= -->
-            <section
-              class="screen active full-center"
-              id="s1"
-              >
-              <div class="bg">
-              </div>
-              <div class="card">
-                <h1 class="script">
-                  A little secret...
-                </h1>
-                <p class="subtitle">
-                  Only someone special can enter 💌
-                </p>
-                <img
-                  class="photo-frame"
-                  src="images/passcode-couple.jpg"
-                  alt="Your photo together"
-                  >
-                  <p class="subtitle">
-                    Enter the 4-digit passcode
-                  </p>
-                  <div
-                    class="code"
-                    id="codeDots"
-                    >
-                    <span class="dot">
-                    </span>
-                    <span class="dot">
-                    </span>
-                    <span class="dot">
-                    </span>
-                    <span class="dot">
-                    </span>
-                  </div>
-                  <div
-                    class="keypad"
-                    id="keypad"
-                    >
-                    <button type="button" class="key" data-key="1">1</button>
-                    <button type="button" class="key" data-key="2">2</button>
-                    <button type="button" class="key" data-key="3">3</button>
-                    <button type="button" class="key" data-key="4">4</button>
-                    <button type="button" class="key" data-key="5">5</button>
-                    <button type="button" class="key" data-key="6">6</button>
-                    <button type="button" class="key" data-key="7">7</button>
-                    <button type="button" class="key" data-key="8">8</button>
-                    <button type="button" class="key" data-key="9">9</button>
-                    <button type="button" class="key" data-key="clear">⌫</button>
-                    <button type="button" class="key" data-key="0">0</button>
-                    <button type="button" class="key" data-key="enter">↵</button>
-                  </div>
-                  <div id="passMsg">
-                  </div>
-                </div>
-                <button
-                  class="hint"
-                  id="hintBtn"
-                  >
-                  💡 Hint
-                </button>
-                <div
-                  class="hint-box"
-                  id="hintBox"
-                  >
-                  Enter the Number related to You and Me🫦
-                </div>
-              </section>
-              <!-- =========================================================
-              SCREEN 2 — SURPRISE
-              ========================================================= -->
-              <section
-                class="screen full-center"
-                id="s2"
-                >
-                <div class="bg">
-                </div>
-                <div class="card">
-                  <div style="font-size:65px">
-                    🎀💗
-                  </div>
-                  <h1 class="title">
-                    I have a little<br>
-                    <span class="script">
-                      surprise
-                    </span>
-                    for you...
-                  </h1>
-                  <p class="subtitle">
-                    Wanna see it? 🥹🫶🏻
-                  </p>
-                  <div
-                    style="
-                    display:flex;
-                    gap:15px;
-                    justify-content:center;
-                    margin-top:25px;
-                    flex-wrap:wrap;
-                    "
-                    >
-                    <button
-                      class="primary"
-                      onclick="go('s6')"
-                      >
-                      YESSS 💗
-                    </button>
-                    <button
-                      class="secondary"
-                      onclick="go('s3')"
-                      >
-                      NO 😈
-                    </button>
-                  </div>
-                </div>
-              </section>
-              <!-- =========================================================
-              SCREEN 3 — NO
-              ========================================================= -->
-              <section
-                class="screen full-center"
-                id="s3"
-                >
-                <div class="bg">
-                </div>
-                <div class="card">
-                  <div class="no-reaction">
-                    HOW DARE YOU<br>
-                    CLICK NO?! 😭
-                  </div>
-                  <img
-                    class="gif-slot"
-                    src="gifs/teddy.gif"
-                    alt="Cute teddy GIF"
-                    >
-                    <p class="subtitle">
-                      That button was NOT for you 🤨💗
-                    </p>
-                    <button
-                      class="primary"
-                      style="margin-top:20px"
-                      onclick="go('s2')"
-                      >
-                      Okay okay... 😭💗
-                    </button>
-                  </div>
-                </section>
-                <!-- =========================================================
-                SCREEN 4 — BIRTHDAY
-                ========================================================= -->
-                <section
-                  class="screen celebrate"
-                  id="s6"
-                  >
-                  <div class="bg">
-                  </div>
-                  <div
-                    class="confetti"
-                    id="confetti1"
-                    >
-                  </div>
-                  <div
-                    class="balloon"
-                    style="--x:5%;--t:10s;--s:-25px"
-                    >
-                    🎈
-                  </div>
-                  <div
-                    class="balloon"
-                    style="--x:78%;--t:12s;--s:30px"
-                    >
-                    🎈
-                  </div>
-                  <div
-                    class="balloon"
-                    style="--x:45%;--t:14s;--s:-15px"
-                    >
-                    🎈
-                  </div>
-                  <div class="card">
-                    <p
-                      class="script"
-                      style="font-size:30px"
-                      >
-                      For my Gulaboo... 💗
-                    </p>
-                    <h1 class="title">
-                      HAPPY<br>
-                      <span style="color:var(--hot)">
-                        BIRTHDAY
-                      </span>
-                      🎂
-                    </h1>
-                    <img
-                      class="birthday-photo"
-                      src="images/birthday-couple.jpg"
-                      alt="Birthday photo of you two"
-                      >
-                      <p class="subtitle">
-                        Today is all about YOUUU 🫶🏻🧿
-                      </p>
-                      <button
-                        class="primary"
-                        style="margin-top:20px"
-                        onclick="go('s7')"
-                        >
-                        Next 💗
-                      </button>
-                    </div>
-                  </section>
-                  <!-- =========================================================
-                  SCREEN 5 — CANDLE
-                  ========================================================= -->
-                  <section
-                    class="screen full-center"
-                    id="s7"
-                    >
-                    <div class="bg">
-                    </div>
-                    <div
-                      class="confetti"
-                      id="confetti2"
-                      >
-                    </div>
-                    <div class="card">
-                      <p
-                        class="script"
-                        style="font-size:34px"
-                        >
-                        Make a wish... ✨
-                      </p>
-                      <div class="cake">
-                        🎂
-                      </div>
-                      <button
-                        class="candle"
-                        id="candle"
-                        aria-label="Blow the candle"
-                        >
-                        🕯️
-                      </button>
-                      <h1
-                        class="title"
-                        style="
-                        font-size:
-                        clamp(35px,9vw,58px)
-                        "
-                        >
-                        Blow the candle 💨
-                      </h1>
-                      <p class="tap-note">
-                        Tap the candle to blow it out 💗
-                      </p>
-                      <div
-                        class="wish-message"
-                        id="wishMessage"
-                        >
-                        Your wish will be heard and completed 💗
-                      </div>
-                      <button
-                        class="primary"
-                        id="wishNext"
-                        style="
-                        display:none;
-                        margin-top:18px
-                        "
-                        onclick="go('s8')"
-                        >
-                        Wish made! 🎊
-                      </button>
-                    </div>
-                  </section>
-                  <!-- =========================================================
-                  SCREEN 6 — 10 OCTOBER
-                  ========================================================= -->
-                  <section
-                    class="screen full-center"
-                    id="s8"
-                    >
-                    <div class="bg">
-                    </div>
-                    <div class="card">
-                      <h1 class="title">
-                        It's your
-                        <span class="script">
-                          day
-                        </span>
-                        💗
-                      </h1>
-                      <p class="subtitle">
-                        10 October ✨
-                      </p>
-                      <div class="calendar">
-                        <div class="cal-head">
-                          October 🎀
-                        </div>
-                        <div class="days">
-                          <span>S</span>
-                          <span>M</span>
-                          <span>T</span>
-                          <span>W</span>
-                          <span>T</span>
-                          <span>F</span>
-                          <span>S</span>
-                          <span>
-                          </span>
-                          <span>
-                          </span>
-                          <span>
-                          </span>
-                          <span>
-                          </span>
-                          <span>1</span>
-                          <span>2</span>
-                          <span>3</span>
-                          <span>4</span>
-                          <span>5</span>
-                          <span>6</span>
-                          <span>7</span>
-                          <span>8</span>
-                          <span>9</span>
-                          <span class="special">
-                            10
-                          </span>
-                          <span>11</span>
-                          <span>12</span>
-                          <span>13</span>
-                          <span>14</span>
-                          <span>15</span>
-                          <span>16</span>
-                          <span>17</span>
-                          <span>18</span>
-                          <span>19</span>
-                          <span>20</span>
-                          <span>21</span>
-                          <span>22</span>
-                          <span>23</span>
-                          <span>24</span>
-                          <span>25</span>
-                          <span>26</span>
-                          <span>27</span>
-                          <span>28</span>
-                          <span>29</span>
-                          <span>30</span>
-                          <span>31</span>
-                        </div>
-                      </div>
-                      <button
-                        class="primary"
-                        style="margin-top:22px"
-                        onclick="go('s9')"
-                        >
-                        There's something for you... 💌
-                      </button>
-                    </div>
-                  </section>
-                  <!-- =========================================================
-                  SCREEN 7 — LETTER
-                  ========================================================= -->
-                  <section
-                    class="screen full-center"
-                    id="s9"
-                    >
-                    <div class="bg">
-                    </div>
-                    <div id="envelopeWrap">
-                      <p
-                        class="script"
-                        style="
-                        font-size:32px;
-                        margin-bottom:20px
-                        "
-                        >
-                        A little letter for you... 💌
-                      </p>
-                      <div
-                        class="envelope"
-                        id="envelope"
-                        >
-                        <div class="seal">
-                          💗
-                        </div>
-                      </div>
-                      <p class="tap-note">
-                        Tap the letter to open it
-                      </p>
-                    </div>
-                    <article
-                      class="letter"
-                      id="letter"
-                      >
-                      <h2>
-                        Happiessttt Birthdaayyy too myyy babyyy myyy jaanuuu meraaa cuttuuuuu bacchaaaa💗🫦🧿🥹🫶🏻
-                      </h2>
-                      <p>
-                        This is your day and i hope I’ll make it very special for youuu gulaabooo💗🧿🤭….i can’t be present with you to celebrate but even in this distance i ensure to make you feel loved soo muchhhh babyyy 🫶🏻💋…. Alsooo my biggestttt shoutout Mummy jiii and Papa jiii forrr bringinggg youuu intooo thisss world at my timeee to blesss meee withhh a baddieeee babyyyy , DEVII mere jeevan kiii hehehehehehhehe💗🧿😚….Jaiiii hooo Maalkinnnn hmeshaaa aappp aiseeee hiiii khusshhhh rhoooo aapkooo wohhh saariii chizein mile ho aapp panaaa chahtiii hooo 🧿🧿🔱….I loveeee youuuu sooo sooo mucchhhh meraaa bacchhaaaa mereee chachaaa jaannnnn onceee againnnn Happyyyyy walaaaaa Birthddaayyyyyyy Gulaaaboooooo😈😈🤭🤭🫶🏻🫶🏻🔱🔱💋💗💗🫦🧿🧿🧿
-                      </p>
-                      <div
-                        style="
-                        text-align:center;
-                        margin-top:25px
-                        "
-                        >
-                        <button
-                          class="primary"
-                          onclick="go('s10')"
-                          >
-                          Our memories 📸💗
-                        </button>
-                      </div>
-                    </article>
-                  </section>
-                  <!-- =========================================================
-                  SCREEN 8 — MEMORIES
-                  ========================================================= -->
-                  <section
-                    class="screen memories"
-                    id="s10"
-                    >
-                    <div class="bg">
-                    </div>
-                    <div class="card">
-                      <h1
-                        class="title"
-                        style="
-                        font-size:
-                        clamp(32px,9vw,58px)
-                        "
-                        >
-                        Some memories<br>
-                        of
-                        <span class="script">
-                          US
-                        </span>
-                        :-💗🧿
-                      </h1>
-                      <div class="memory-grid">
-                        <div class="memory">
-                          <img
-                            src="images/memory1.jpg"
-                            alt="Memory 1"
-                            loading="lazy"
-                            >
-                          </div>
-                          <div class="memory">
-                            <img
-                              src="images/memory2.jpg"
-                              alt="Memory 2"
-                              loading="lazy"
-                              >
-                            </div>
-                            <div class="memory">
-                              <img
-                                src="images/memory3.jpg"
-                                alt="Memory 3"
-                                loading="lazy"
-                                >
-                              </div>
-                              <div class="memory">
-                                <img
-                                  src="images/memory4.jpg"
-                                  alt="Memory 4"
-                                  loading="lazy"
-                                  >
-                                </div>
-                                <div class="memory">
-                                  <img
-                                    src="images/memory5.jpg"
-                                    alt="Memory 5"
-                                    loading="lazy"
-                                    >
-                                  </div>
-                                </div>
-                                <p class="tap-note">
-                                  Made with way too much love. 💗🫶🏻
-                                </p>
-                              </div>
-                            </section>
-                          </div>
-                          <script>
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     🎵 BACKGROUND MUSIC
+========================================================= -->
+
+<audio
+  id="backgroundMusic"
+  src="birthday.mp3"
+  preload="auto"
+  loop
+></audio>
+
+
+<div id="app">
+
+
+<!-- =========================================================
+     SCREEN 1 — PASSCODE
+========================================================= -->
+
+<section
+  class="screen active full-center"
+  id="s1"
+>
+
+  <div class="bg"></div>
+
+  <div class="card">
+
+    <h1 class="script">
+      A little secret...
+    </h1>
+
+    <p class="subtitle">
+      Only someone special can enter 💌
+    </p>
+
+    <img
+      class="photo-frame"
+      src="birthday-couple.JPG"
+      alt="Your photo together"
+    >
+
+    <p class="subtitle">
+      Enter the 4-digit passcode
+    </p>
+
+    <div
+      class="code"
+      id="codeDots"
+    >
+
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+
+    </div>
+
+    <div
+      class="keypad"
+      id="keypad"
+    >
+
+      <button type="button" class="key" data-key="1">1</button>
+      <button type="button" class="key" data-key="2">2</button>
+      <button type="button" class="key" data-key="3">3</button>
+
+      <button type="button" class="key" data-key="4">4</button>
+      <button type="button" class="key" data-key="5">5</button>
+      <button type="button" class="key" data-key="6">6</button>
+
+      <button type="button" class="key" data-key="7">7</button>
+      <button type="button" class="key" data-key="8">8</button>
+      <button type="button" class="key" data-key="9">9</button>
+
+      <button type="button" class="key" data-key="clear">⌫</button>
+      <button type="button" class="key" data-key="0">0</button>
+      <button type="button" class="key" data-key="enter">↵</button>
+
+    </div>
+
+    <div id="passMsg"></div>
+
+  </div>
+
+
+  <button
+    class="hint"
+    id="hintBtn"
+  >
+    💡 Hint
+  </button>
+
+
+  <div
+    class="hint-box"
+    id="hintBox"
+  >
+    Enter the Number related to You and Me🫦
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     SCREEN 2 — SURPRISE
+========================================================= -->
+
+<section
+  class="screen full-center"
+  id="s2"
+>
+
+  <div class="bg"></div>
+
+  <div class="card">
+
+    <div style="font-size:65px">
+      🎀💗
+    </div>
+
+    <h1 class="title">
+
+      I have a little<br>
+
+      <span class="script">
+        surprise
+      </span>
+
+      for you...
+
+    </h1>
+
+    <p class="subtitle">
+      Wanna see it? 🥹🫶🏻
+    </p>
+
+    <div
+      style="
+      display:flex;
+      gap:15px;
+      justify-content:center;
+      margin-top:25px;
+      flex-wrap:wrap;
+      "
+    >
+
+      <button
+        class="primary"
+        onclick="go('s6')"
+      >
+        YESSS 💗
+      </button>
+
+      <button
+        class="secondary"
+        onclick="go('s3')"
+      >
+        NO 😈
+      </button>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     SCREEN 3 — NO
+========================================================= -->
+
+<section
+  class="screen full-center"
+  id="s3"
+>
+
+  <div class="bg"></div>
+
+  <div class="card">
+
+    <div class="no-reaction">
+
+      HOW DARE YOU<br>
+
+      CLICK NO?! 😭
+
+    </div>
+
+
+    <!-- 🧸 ACTUAL TEDDY GIF FROM GITHUB REPOSITORY -->
+
+    <img
+      class="teddy"
+      src="teddy.GIF"
+      alt="Cute teddy"
+    >
+
+
+    <p class="subtitle">
+      That button was NOT for you 🤨💗
+    </p>
+
+
+    <button
+      class="primary"
+      style="margin-top:20px"
+      onclick="go('s2')"
+    >
+      Okay okay... 😭💗
+    </button>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     SCREEN 4 — BIRTHDAY
+========================================================= -->
+
+<section
+  class="screen celebrate"
+  id="s6"
+>
+
+  <div class="bg"></div>
+
+  <div
+    class="confetti"
+    id="confetti1"
+  ></div>
+
+
+  <div
+    class="balloon"
+    style="--x:5%;--t:10s;--s:-25px"
+  >
+    🎈
+  </div>
+
+
+  <div
+    class="balloon"
+    style="--x:78%;--t:12s;--s:30px"
+  >
+    🎈
+  </div>
+
+
+  <div
+    class="balloon"
+    style="--x:45%;--t:14s;--s:-15px"
+  >
+    🎈
+  </div>
+
+
+  <div class="card">
+
+    <p
+      class="script"
+      style="font-size:30px"
+    >
+      For my Gulaboo... 💗
+    </p>
+
+
+    <h1 class="title">
+
+      HAPPY<br>
+
+      <span style="color:var(--hot)">
+        BIRTHDAY
+      </span>
+
+      🎂
+
+    </h1>
+
+
+    <img
+      class="birthday-photo"
+      src="birthday-couple.JPG"
+      alt="Birthday photo of you two"
+    >
+
+
+    <p class="subtitle">
+      Today is all about YOUUU 🫶🏻🧿
+    </p>
+
+
+    <button
+      class="primary"
+      style="margin-top:20px"
+      onclick="go('s7')"
+    >
+      Next 💗
+    </button>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     SCREEN 5 — CANDLE
+========================================================= -->
+
+<section
+  class="screen full-center"
+  id="s7"
+>
+
+  <div class="bg"></div>
+
+
+  <div
+    class="confetti"
+    id="confetti2"
+  ></div>
+
+
+  <div class="card">
+
+    <p
+      class="script"
+      style="font-size:34px"
+    >
+      Make a wish... ✨
+    </p>
+
+
+    <div class="cake">
+      🎂
+    </div>
+
+
+    <button
+      class="candle"
+      id="candle"
+      aria-label="Blow the candle"
+    >
+      🕯️
+    </button>
+
+
+    <h1
+      class="title"
+      style="
+      font-size:
+      clamp(35px,9vw,58px)
+      "
+    >
+      Blow the candle 💨
+    </h1>
+
+
+    <p class="tap-note">
+      Tap the candle to blow it out 💗
+    </p>
+
+
+    <div
+      class="wish-message"
+      id="wishMessage"
+    >
+      Your wish will be heard and completed 💗
+    </div>
+
+
+    <button
+      class="primary"
+      id="wishNext"
+      style="
+      display:none;
+      margin-top:18px
+      "
+      onclick="go('s8')"
+    >
+      Wish made! 🎊
+    </button>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     SCREEN 6 — 10 OCTOBER
+========================================================= -->
+
+<section
+  class="screen full-center"
+  id="s8"
+>
+
+  <div class="bg"></div>
+
+
+  <div class="card">
+
+    <h1 class="title">
+
+      It's your
+
+      <span class="script">
+        day
+      </span>
+
+      💗
+
+    </h1>
+
+
+    <p class="subtitle">
+      10 October ✨
+    </p>
+
+
+    <div class="calendar">
+
+      <div class="cal-head">
+        October 🎀
+      </div>
+
+
+      <div class="days">
+
+        <span>S</span>
+        <span>M</span>
+        <span>T</span>
+        <span>W</span>
+        <span>T</span>
+        <span>F</span>
+        <span>S</span>
+
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+
+        <span>4</span>
+        <span>5</span>
+        <span>6</span>
+        <span>7</span>
+        <span>8</span>
+        <span>9</span>
+
+        <span class="special">
+          10
+        </span>
+
+        <span>11</span>
+        <span>12</span>
+        <span>13</span>
+        <span>14</span>
+        <span>15</span>
+        <span>16</span>
+        <span>17</span>
+
+        <span>18</span>
+        <span>19</span>
+        <span>20</span>
+        <span>21</span>
+        <span>22</span>
+        <span>23</span>
+        <span>24</span>
+
+        <span>25</span>
+        <span>26</span>
+        <span>27</span>
+        <span>28</span>
+        <span>29</span>
+        <span>30</span>
+        <span>31</span>
+
+      </div>
+
+    </div>
+
+
+    <button
+      class="primary"
+      style="margin-top:22px"
+      onclick="go('s9')"
+    >
+      There's something for you... 💌
+    </button>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     SCREEN 7 — LETTER
+========================================================= -->
+
+<section
+  class="screen full-center"
+  id="s9"
+>
+
+  <div class="bg"></div>
+
+
+  <div id="envelopeWrap">
+
+    <p
+      class="script"
+      style="
+      font-size:32px;
+      margin-bottom:20px
+      "
+    >
+      A little letter for you... 💌
+    </p>
+
+
+    <div
+      class="envelope"
+      id="envelope"
+    >
+
+      <div class="seal">
+        💗
+      </div>
+
+    </div>
+
+
+    <p class="tap-note">
+      Tap the letter to open it
+    </p>
+
+  </div>
+
+
+
+  <article
+    class="letter"
+    id="letter"
+  >
+
+    <h2>
+      Happiessttt Birthdaayyy too myyy babyyy myyy jaanuuu meraaa cuttuuuuu bacchaaaa💗🫦🧿🥹🫶🏻
+    </h2>
+
+
+    <p>
+This is your day and i hope I’ll make it very special for youuu gulaabooo💗🧿🤭….i can’t be present with you to celebrate but even in this distance i ensure to make you feel loved soo muchhhh babyyy 🫶🏻💋…. Alsooo my biggestttt shoutout Mummy jiii and Papa jiii forrr bringinggg youuu intooo thisss world at my timeee to blesss meee withhh a baddieeee babyyyy , DEVII mere jeevan kiii hehehehehehhehe💗🧿😚….Jaiiii hooo Maalkinnnn hmeshaaa aappp aiseeee hiiii khusshhhh rhoooo aapkooo wohhh saariii chizein mile ho aapp panaaa chahtiii hooo 🧿🧿🔱….I loveeee youuuu sooo sooo mucchhhh meraaa bacchhaaaa mereee chachaaa jaannnnn onceee againnnn Happyyyyy walaaaaa Birthddaayyyyyyy Gulaaaboooooo😈😈🤭🤭🫶🏻🫶🏻🔱🔱💋💗💗🫦🧿🧿🧿
+    </p>
+
+
+    <div
+      style="
+      text-align:center;
+      margin-top:25px
+      "
+    >
+
+      <button
+        class="primary"
+        onclick="go('s10')"
+      >
+        Our memories 📸💗
+      </button>
+
+    </div>
+
+  </article>
+
+</section>
+
+
+
+<!-- =========================================================
+     SCREEN 8 — MEMORIES
+========================================================= -->
+
+<section
+  class="screen memories"
+  id="s10"
+>
+
+  <div class="bg"></div>
+
+
+  <div class="card">
+
+    <h1
+      class="title"
+      style="
+      font-size:
+      clamp(32px,9vw,58px)
+      "
+    >
+
+      Some memories<br>
+
+      of
+
+      <span class="script">
+        US
+      </span>
+
+      :-💗🧿
+
+    </h1>
+
+
+    <div class="memory-grid">
+
+
+      <div class="memory">
+
+        <img
+          src="memory1.jpg"
+          alt="Memory 1"
+          loading="lazy"
+        >
+
+      </div>
+
+
+      <div class="memory">
+
+        <img
+          src="memory2.jpg"
+          alt="Memory 2"
+          loading="lazy"
+        >
+
+      </div>
+
+
+      <div class="memory">
+
+        <img
+          src="memory3.jpg"
+          alt="Memory 3"
+          loading="lazy"
+        >
+
+      </div>
+
+
+      <div class="memory">
+
+        <img
+          src="memory4.jpg"
+          alt="Memory 4"
+          loading="lazy"
+        >
+
+      </div>
+
+
+      <div class="memory">
+
+        <img
+          src="memory5.JPG"
+          alt="Memory 5"
+          loading="lazy"
+        >
+
+      </div>
+
+
+    </div>
+
+
+    <p class="tap-note">
+      Made with way too much love. 💗🫶🏻
+    </p>
+
+  </div>
+
+</section>
+
+
+</div>
+
+
+
+<script>
 
 /* =========================================================
    🎵 BACKGROUND MUSIC
@@ -2205,9 +2086,7 @@ function startMusic(){
 
   backgroundMusic.play()
     .catch(() => {
-
       musicStarted = false;
-
     });
 
 }
@@ -2792,5 +2671,6 @@ document
 );
 
 </script>
-                        </body>
-                      </html>
+
+</body>
+</html>
